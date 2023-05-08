@@ -2,6 +2,7 @@ import React from "react";
 import "./App.css";
 import { TimeOptions } from "./Components/TimeOptions";
 import { CountdownComponent } from "./Components/CountdownComponent";
+
 import { useState } from "react";
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         hourNum={HourValue}
         minNum={minValue}
         secNum={secValue}
+        handleClick={() => setIsClicked(false)}
         clicked={isCLicked}
       />
       <TimeOptions
@@ -26,6 +28,7 @@ function App() {
         minValue={setMinValue}
         secValue={setSecValue}
         handleClick={() => setIsClicked(true)}
+        clicked={isCLicked}
       />
     </div>
   );

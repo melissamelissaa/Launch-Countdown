@@ -8,9 +8,13 @@ type CountdownComponentProps = {
   secNum: number;
   clicked: boolean;
   handleClick: () => void;
+  
 };
 
+// {setInterval((props.dayNum) => {}, 1000)}
 export const CountdownComponent = (props: CountdownComponentProps) => {
+
+    
   if (props.clicked) {
     return (
       <div className="countdownDiv">

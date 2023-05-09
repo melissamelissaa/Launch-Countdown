@@ -8,6 +8,7 @@ type timeOptionsProps = {
   secValue: Function;
   handleClick: () => void;
   clicked: boolean;
+  
 };
 
 export const TimeOptions = (props: timeOptionsProps) => {

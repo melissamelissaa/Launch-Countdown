@@ -13,6 +13,23 @@ function App() {
 
   const [isCLicked, setIsClicked] = useState(false);
 
+  if (HourValue > 24) {
+    setHourValue(0);
+    alert("Hours can not be higher than 24");
+  };
+
+  if (minValue > 60) {
+    setMinValue(0);
+    alert("Minutes can not be higher than 60");
+  }
+
+  if (secValue > 60) {
+    setSecValue(0); 
+    alert("Seconds can not be higher than 60");
+    
+  }
+
+
   useEffect(() => {
     const interval = setInterval(() => {
       setSecValue((secValue) => {

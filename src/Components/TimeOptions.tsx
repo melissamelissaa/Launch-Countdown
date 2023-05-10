@@ -18,6 +18,7 @@ export const TimeOptions = (props: timeOptionsProps) => {
         <FontAwesomeIcon icon={faTimes} className="icon" onClick={props.handleClick}/>
         <label className="label">Days</label>
         <input
+          required
           className="input"
           type="number"
           placeholder="0"
@@ -25,6 +26,7 @@ export const TimeOptions = (props: timeOptionsProps) => {
         />
         <label className="label">Hours</label>
         <input
+          required
           className="input"
           type="number"
           placeholder="0"
@@ -32,6 +34,7 @@ export const TimeOptions = (props: timeOptionsProps) => {
         />
         <label className="label">Minutes</label>
         <input
+          required
           className="input"
           type="number"
           placeholder="0"
@@ -39,6 +42,7 @@ export const TimeOptions = (props: timeOptionsProps) => {
         />
         <label className="label">Seconds</label>
         <input
+          required
           className="input"
           type="number"
           placeholder="0"

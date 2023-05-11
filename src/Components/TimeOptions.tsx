@@ -16,7 +16,7 @@ export const TimeOptions = (props: timeOptionsProps) => {
     return (
       <div className="timeOptions-div">
         <FontAwesomeIcon icon={faTimes} className="icon" onClick={props.handleClick}/>
-        <label className="label">Days</label>
+        <label className="label">DAYS</label>
         <input
           required
           className="input"
@@ -24,7 +24,7 @@ export const TimeOptions = (props: timeOptionsProps) => {
           placeholder="0"
           onChange={(e) => props.dayValue(e.target.value)}
         />
-        <label className="label">Hours</label>
+        <label className="label">HOURS</label>
         <input
           required
           className="input"
@@ -32,7 +32,7 @@ export const TimeOptions = (props: timeOptionsProps) => {
           placeholder="0"
           onChange={(e) => props.hourValue(e.target.value)}
         />
-        <label className="label">Minutes</label>
+        <label className="label">MINUTES</label>
         <input
           required
           className="input"
@@ -40,7 +40,7 @@ export const TimeOptions = (props: timeOptionsProps) => {
           placeholder="0"
           onChange={(e) => props.minValue(e.target.value)}
         />
-        <label className="label">Seconds</label>
+        <label className="label">SECONDS</label>
         <input
           required
           className="input"

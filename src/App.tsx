@@ -14,17 +14,14 @@ function App() {
   const [isCLicked, setIsClicked] = useState(false);
 
   if (HourValue > 24) {
-    setHourValue(0);
     alert("Hours can not be higher than 24");
   };
 
   if (minValue > 60) {
-    setMinValue(0);
     alert("Minutes can not be higher than 60");
   }
 
   if (secValue > 60) {
-    setSecValue(0); 
     alert("Seconds can not be higher than 60");
     
   }
@@ -33,7 +30,6 @@ function App() {
   useEffect(() => {
     const interval = setInterval(() => {
       setSecValue((secValue) => {
-        if (secValue === 0 && minValue > 0) setMinValue(minValue - 1);
         if (
           dayValue === 0 &&
           HourValue === 0 &&
@@ -43,6 +39,8 @@ function App() {
           return secValue;
         }
 
+        if (secValue === 0 && minValue > 0) setMinValue(minValue - 1);
+       
         if (minValue === 0 && secValue === 0 && HourValue > 0) {
           setHourValue(HourValue - 1);
           setMinValue(59);
@@ -68,7 +66,7 @@ function App() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [secValue, dayValue, HourValue, minValue, isCLicked]);
+  }, [secValue, isCLicked]);
 
   const cleanUpFunc = () => {
     setIsClicked(false);

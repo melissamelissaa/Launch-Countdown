@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
 
 .timeOptions-div {
   display: flex;
@@ -15,12 +15,14 @@
 }
 
 body {
+  margin: 0;
+  padding: 0;
   background-image: url(desktop.jpg);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
   color: black;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 .input::-webkit-outer-spin-button,
 .input::-webkit-inner-spin-button {
@@ -29,19 +31,76 @@ body {
 }
 .input:focus {
   outline: none;
-  
 }
 .input {
-    border: 1.5px solid rgb(90, 90, 90);
-    border-radius: 11px;
-    height: 3.5vh;
-    text-align: center;
-    background-color: #cfb995;
-    color: black;
+  border: 1.5px solid rgb(90, 90, 90);
+  border-radius: 11px;
+  height: 3.5vh;
+  text-align: center;
+  background-color: #cfb995;
+  color: black;
 }
 .input::placeholder {
-    color:black;
+  color: black;
 }
 .label {
-    font-size: 20px;
+  font-size: 20px;
+}
+.timeOptions-btn {
+  background-image: linear-gradient(
+    to right,
+    #e6d377 0%,
+    #333333 60%,
+    #edd978 100%
+  );
+  margin: 10px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  border-radius: 10px;
+  display: block;
+  border: none;
+  cursor: pointer;
+}
+.timeOptions-btn:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+.icon {
+  cursor: pointer;
+  transition: 0.3s;
+}
+.icon:hover {
+  color: white;
+}
+.faCog {
+  float: right;
+}
+.dayDiv,
+.hrDiv,
+.minDiv,
+.secDiv {
+  background-color: rgb(107, 91, 59, 0.6);
+  width: 6rem;
+  /* height: 5rem; */
+  text-align: center;
+  padding: 5px 0;
+  font-size: 4rem;
+}
+.fourDivContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 5vh;
+}
+
+.numtxt,
+.countdownDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

@@ -8,38 +8,45 @@ type CountdownComponentProps = {
   secNum: number;
   clicked: boolean;
   handleClick: () => void;
-  
 };
 
 // {setInterval((props.dayNum) => {}, 1000)}
 export const CountdownComponent = (props: CountdownComponentProps) => {
-
-    
   if (props.clicked) {
     return (
-      <div className="countdownDiv">
+      <div>
         <FontAwesomeIcon
           icon={faCog}
-          className="icon"
+          className="icon faCog"
           onClick={props.handleClick}
         />
-        <h1 className="heading">We're Launching Soon</h1>
-        <div className="fourDivContainer">
-          <div className="dayDiv">
-            <div>{props.dayNum}</div>
-            <p>Days</p>
-          </div>
-          <div className="hrDiv">
-            <div>{props.hourNum}</div>
-            <p>Hours</p>
-          </div>
-          <div className="minDiv">
-            <div>{props.minNum}</div>
-            <p>Minutes</p>
-          </div>
-          <div className="secDiv">
-            <div>{props.secNum}</div>
-            <p>Seconds</p>
+        <div className="countdownDiv">
+          <h1 className="heading">WE'RE LAUNCHING SOON</h1>
+          <div className="fourDivContainer">
+            <div className="numtxt">
+              <div className="dayDiv">{props.dayNum}</div>
+              <div>
+                <p>DAYS</p>
+              </div>
+            </div>
+            <div className="numtxt">
+              <div className="hrDiv">{props.hourNum}</div>
+              <div>
+                <p>HOURS</p>
+              </div>
+            </div>
+            <div className="numtxt">
+              <div className="minDiv">{props.minNum}</div>
+              <div>
+                <p>MINUTES</p>
+              </div>
+            </div>
+            <div className="numtxt">
+              <div className="secDiv">{props.secNum}</div>
+              <div>
+                <p>SECONDS</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

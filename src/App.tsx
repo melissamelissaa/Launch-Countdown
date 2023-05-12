@@ -4,6 +4,8 @@ import { TimeOptions } from "./Components/TimeOptions";
 import { CountdownComponent } from "./Components/CountdownComponent";
 
 import { useState, useEffect, useRef } from "react";
+import { homedir } from "os";
+import { waitFor } from "@testing-library/react";
 
 function App() {
   const [dayValue, setdayValue] = useState(0);
@@ -12,20 +14,6 @@ function App() {
   const [secValue, setSecValue] = useState(0);
 
   const [isCLicked, setIsClicked] = useState(false);
-
-  if (HourValue > 24) {
-    alert("Hours can not be higher than 24");
-  };
-
-  if (minValue > 60) {
-    alert("Minutes can not be higher than 60");
-  }
-
-  if (secValue > 60) {
-    alert("Seconds can not be higher than 60");
-    
-  }
-
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -40,7 +28,7 @@ function App() {
         }
 
         if (secValue === 0 && minValue > 0) setMinValue(minValue - 1);
-       
+
         if (minValue === 0 && secValue === 0 && HourValue > 0) {
           setHourValue(HourValue - 1);
           setMinValue(59);
@@ -75,6 +63,27 @@ function App() {
     setMinValue(0);
     setSecValue(0);
   };
+  const validateAndSetHour = (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (+e.target.value > 24) {
+        alert("Hours can not be higher than 24");
+        e.target.value = "";
+        setHourValue(0);
+      } else setHourValue(+e.target.value);
+  };
+  const validateAndSetMin = (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (+e.target.value > 60) {
+        alert("Minutes can not be higher than 60");
+        e.target.value = "";
+        setMinValue(0);
+      } else setMinValue(+e.target.value);
+  };
+  const validateAndSetSec = (e: React.ChangeEvent<HTMLInputElement>) => {
+      if (+e.target.value > 60) {
+        alert("Seconds can not be higher than 60");
+        e.target.value = "";
+        setSecValue(0);
+      } else setSecValue(+e.target.value);
+  };
 
   return (
     <div className="App">
@@ -88,9 +97,9 @@ function App() {
       />
       <TimeOptions
         dayValue={setdayValue}
-        hourValue={setHourValue}
-        minValue={setMinValue}
-        secValue={setSecValue}
+        hourValue={validateAndSetHour}
+        minValue={validateAndSetMin}
+        secValue={validateAndSetSec}
         handleClick={() => setIsClicked(true)}
         clicked={isCLicked}
       />

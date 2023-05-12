@@ -13,51 +13,44 @@ type timeOptionsProps = {
 export const TimeOptions = (props: timeOptionsProps) => {
   if (!props.clicked) {
     return (
-      
-        <div className="timeOptions-div">
-
+      <div className="timeOptions-div">
         <FontAwesomeIcon
           icon={faTimes}
           className="icon exit"
           onClick={props.handleClick}
         />
-          <label className="label">DAYS</label>
-          <input
-            required
-            className="input"
-            type="number"
-            placeholder="0"
-            onChange={(e) => props.dayValue(e.target.value)}
-          />
-          <label className="label">HOURS</label>
-          <input
-            required
-            className="input"
-            type="number"
-            placeholder="0"
-            onChange={(e) => props.hourValue(e.target.value)}
-          />
-          <label className="label">MINUTES</label>
-          <input
-            required
-            className="input"
-            type="number"
-            placeholder="0"
-            onChange={(e) => props.minValue(e.target.value)}
-          />
-          <label className="label">SECONDS</label>
-          <input
-            required
-            className="input"
-            type="number"
-            placeholder="0"
-            onChange={(e) => props.secValue(e.target.value)}
-          />
-          <button className="timeOptions-btn" onClick={props.handleClick}>
-            Start
-          </button>
-        </div>
-
+        <label className="label">DAYS</label>
+        <input
+          required
+          className="input"
+          type="number"
+          onChange={(e) => props.dayValue(e.target.value)}
+        />
+        <label className="label">HOURS</label>
+        <input
+          required
+          className="input"
+          type="number"
+          onChange={(e) => props.hourValue(e)}
+        />
+        <label className="label">MINUTES</label>
+        <input
+          required
+          className="input"
+          type="number"
+          onChange={(e) => props.minValue(e)}
+        />
+        <label className="label">SECONDS</label>
+        <input
+          required
+          className="input"
+          type="number"
+          onChange={(e) => props.secValue(e)}
+        />
+        <button className="timeOptions-btn" onClick={props.handleClick}>
+          Start
+        </button>
+      </div>
     );
   } else return null;
 };

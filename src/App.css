@@ -91,7 +91,7 @@ body {
 .hrDiv,
 .minDiv,
 .secDiv {
-  background-color: rgba(125, 111, 82, 0.6);
+  background-color: rgba(125, 111, 82, 0.5);
   width: 6rem;
   text-align: center;
   padding: 5px 0;
@@ -110,8 +110,9 @@ body {
   margin-top: 4rem;
   margin-left: 3rem;
   white-space: nowrap;
-  font-size: 1.8rem;
+  font-size: 1.7rem;
 }
+
 
 .numtxt,
 .countdownDiv {
@@ -140,5 +141,8 @@ body {
     margin-top: -2.4rem;
     margin-left: 16rem;
     margin-bottom: 2rem;
+  }
+  .heading {
+    font-size: 2.1rem;
   }
 }

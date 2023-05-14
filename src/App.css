@@ -1,11 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
 
 .timeOptions-div {
-  display: flex;
-  flex-direction: column;
   width: 20rem;
   background-color: rgb(107, 91, 59, 0.4);
-  align-items: center;
   justify-content: center;
   height: 70vh;
   margin: 0 auto;
@@ -22,7 +19,7 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: black;
-  font-family: "Raleway", sans-serif;
+  font-family: "Roboto Slab", serif;
 }
 
 .input::-webkit-outer-spin-button,
@@ -41,9 +38,9 @@ body {
   height: 3.5vh;
   text-align: center;
   background-color: #cfb995;
-  color: black;
 }
-.input::placeholder {
+.input::placeholder,
+.input {
   color: black;
 }
 .label {
@@ -113,18 +110,18 @@ body {
   font-size: 1.7rem;
 }
 
-
 .numtxt,
-.countdownDiv {
+.countdownDiv,
+.timeOptions-div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .exit {
-    margin-top: -7vh;
-    margin-left: 63vw;
-    margin-bottom: 4vh;
+  margin-top: -7vh;
+  margin-left: 63vw;
+  margin-bottom: 4vh;
   font-size: 2rem;
 }
 

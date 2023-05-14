@@ -21,7 +21,7 @@ export const CountdownComponent = (props: CountdownComponentProps) => {
           onClick={props.handleClick}
         />
         <div className="countdownDiv">
-          <h1 className="heading">WE'RE &nbsp; LAUNCHING &nbsp;SOON!</h1>
+          <h1 className="heading">WE'RE &nbsp; LAUNCHING &nbsp;SOON !</h1>
           <div className="fourDivContainer">
             <div className="numtxt">
               <div className="dayDiv">{props.dayNum}</div>
